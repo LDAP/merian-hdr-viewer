@@ -48,10 +48,12 @@ int main(int argc, char** argv) {
     graph.add_node(exp);
     graph.add_node(tonemap);
     graph.add_node(curve);
+    graph.add_node(image_out);
     graph.add_connection(image_in, exp, "out", "src");
     graph.add_connection(exp, tonemap, "out", "src");
     graph.add_connection(tonemap, curve, "out", "src");
     graph.add_connection(curve, window, "out", "src");
+    graph.add_connection(curve, image_out, "out", "src");
 
     // Setup IMGUI window, by hooking into the window node.
     merian::ImGuiContextWrapperHandle debug_ctx = std::make_shared<merian::ImGuiContextWrapper>();
