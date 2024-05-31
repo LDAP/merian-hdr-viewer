@@ -23,7 +23,6 @@ meson setup build --buildtype=debugoptimized
 meson compile -C build
 
 # Run
-# An example shader is provided in res/shaders/shader.comp.glsl
-./build/merian-hdr-viewer <path/to/shader>
+./build/merian-hdr-viewer <path/to/image.hdr>
 
 ```
