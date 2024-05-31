@@ -21,7 +21,7 @@ if get_option('performance_profiling')
 endif
 
 # Dependencies
-merian = dependency('merian', version: ['>=1.0.0'], fallback: ['merian', 'merian_dep'], default_options: {'shaderc': 'enabled'})
+merian = dependency('merian', version: ['>=1.0.0'], fallback: ['merian', 'merian_dep'])
 
 # Main targets
 # Keep sorted
